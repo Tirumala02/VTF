@@ -1,12 +1,24 @@
+// import mongoose from "mongoose";
+
+// const userSchema = new mongoose.Schema({
+//     name: { type: String, required: true },
+//     email: { type: String, required: true, unique: true },
+//     password: { type: String, required: true },
+//     cartData: { type: Object, default: {} }
+// }, { minimize: false })
+
+// const userModel = mongoose.models.user || mongoose.model('user',userSchema);
+
+// export default userModel
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
+    email: { type: String, unique: true, sparse: true },
+    password: { type: String },
+    guestId: { type: String, unique: true },
+    userType: { type: String, enum: ["registered", "guest"], default: "registered" },
     cartData: { type: Object, default: {} }
-}, { minimize: false })
+}, { timestamps: true });
 
-const userModel = mongoose.models.user || mongoose.model('user',userSchema);
-
-export default userModel
+export default mongoose.model("User", userSchema);
