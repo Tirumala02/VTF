@@ -759,7 +759,7 @@ const PlaceOrder = () => {
                             <input onChange={onChangeHandler} name='state' value={formData.state} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='State' disabled={isLoading} />
                         </div>
                         <div className='flex gap-3'>
-                            <input required onChange={onChangeHandler} name='Zipcode' value={formData.zipcode} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Pincode' disabled={isLoading} />
+                            <input required onChange={onChangeHandler} name='zipcode' value={formData.zipcode} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Pincode' disabled={isLoading} />
                             <input required onChange={onChangeHandler} name='country' value={formData.country} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='Country' disabled={isLoading} />
                         </div>
                         <input required onChange={onChangeHandler} name='phone' value={formData.phone} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Phone' disabled={isLoading} />
@@ -771,10 +771,10 @@ const PlaceOrder = () => {
                     <div className='border p-4 rounded'>
                         <h2 className='text-xl font-medium mb-4'>Payment Method</h2>
                         <div className='flex flex-col gap-3'>
-                            <label className='flex items-center gap-2 cursor-pointer'>
+                            {/* <label className='flex items-center gap-2 cursor-pointer'>
                                 <input type="radio" name="payment" value="stripe" checked={method === 'stripe'} onChange={() => setMethod('stripe')} disabled={isLoading} />
                                 <img className='h-5' src={assets.stripe_logo} alt="Stripe" />
-                            </label>
+                            </label> */}
                             <label className='flex items-center gap-2 cursor-pointer'>
                                 <input type="radio" name="payment" value="razorpay" checked={method === 'razorpay'} onChange={() => setMethod('razorpay')} disabled={isLoading} />
                                 <img className='h-5' src={assets.razorpay_logo} alt="Razorpay" />
@@ -814,10 +814,10 @@ const PlaceOrder = () => {
                     <div className='mt-12'>
                         <Title text1={'PAYMENT'} text2={'METHOD'} />
                         <div className='flex gap-3 flex-col lg:flex-row'>
-                            <label className='flex items-center gap-2 cursor-pointer'>
+                            {/* <label className='flex items-center gap-2 cursor-pointer'>
                                 <input type="radio" name="payment" value="stripe" checked={method === 'stripe'} onChange={() => setMethod('stripe')} disabled={isLoading} />
                                 <img className='h-5' src={assets.stripe_logo} alt="Stripe" />
-                            </label>
+                            </label> */}
                             <label className='flex items-center gap-2 cursor-pointer'>
                                 <input type="radio" name="payment" value="razorpay" checked={method === 'razorpay'} onChange={() => setMethod('razorpay')} disabled={isLoading} />
                                 <img className='h-5' src={assets.razorpay_logo} alt="Razorpay" />
