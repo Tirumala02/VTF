@@ -759,7 +759,7 @@ const PlaceOrder = () => {
                             <input onChange={onChangeHandler} name='state' value={formData.state} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='State' disabled={isLoading} />
                         </div>
                         <div className='flex gap-3'>
-                            <input required onChange={onChangeHandler} name='pincode' value={formData.zipcode} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Pincode' disabled={isLoading} />
+                            <input required onChange={onChangeHandler} name='Zipcode' value={formData.zipcode} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Pincode' disabled={isLoading} />
                             <input required onChange={onChangeHandler} name='country' value={formData.country} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="text" placeholder='Country' disabled={isLoading} />
                         </div>
                         <input required onChange={onChangeHandler} name='phone' value={formData.phone} className='border border-gray-300 rounded py-1.5 px-3.5 w-full' type="number" placeholder='Phone' disabled={isLoading} />
